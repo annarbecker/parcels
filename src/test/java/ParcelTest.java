@@ -18,7 +18,7 @@ public class ParcelTest {
   @Test
   public void costToShip_returnsPriceWithGivenDimensions_dollarAmount() {
     Parcel testParcel = new Parcel(3.1, 4.0, 6.0, 12.5);
-    assertEquals(4.45, testParcel.costToShip(), 0);
+    assertEquals(4.45, testParcel.costToShip(2, 25), 0);
   }
 
   @Test
