@@ -14,4 +14,17 @@ public class ParcelTest {
     Parcel testParcel = new Parcel(3.1, 4.0, 6.0, 12.5);
     assertEquals(74.4, testParcel.volume(), 0);
   }
+
+  @Test
+  public void costToShip_returnsPriceWithGivenDimensions_dollarAmount() {
+    Parcel testParcel = new Parcel(3.1, 4.0, 6.0, 12.5);
+    assertEquals(4.45, testParcel.costToShip(), 0);
+  }
+
+  @Test
+  public void surfaceArea_calculateSurfaceWithGivenDimensions_parcelSurface() {
+    Parcel testParcel = new Parcel(3, 4, 5, 12.5);
+    assertEquals(94, testParcel.surfaceArea(), 0);
+  }
+
 }

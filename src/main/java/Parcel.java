@@ -15,4 +15,8 @@ public class Parcel {
   public double volume() {
     return mLength * mWidth * mHeight;
   }
+
+  public double surfaceArea() {
+    return ((mLength * mWidth) + (mLength * mHeight) + (mWidth * mHeight)) * 2;
+  }
 }
