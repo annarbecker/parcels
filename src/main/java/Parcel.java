@@ -18,7 +18,12 @@ public class Parcel {
 
   public double costToShip(int speed, int distance) {
     int cost = 1000;
-    cost += distance * 2;
+    if (distance > 1000) {
+      cost += distance * 0.5;
+    } else {
+      cost += distance * 0.75;
+    }
+
     if (mWeight < 5) {
       cost += 200;
     } else if (mWeight < 20) {
@@ -35,7 +40,7 @@ public class Parcel {
       cost += 350;
     }
     cost *= speed;
-    return cost / 100;
+    return (double) cost / 100;
   }
 
   public double surfaceArea() {
