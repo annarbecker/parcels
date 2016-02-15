@@ -13,6 +13,6 @@ public class Parcel {
   }
 
   public double volume() {
-    return 1.0;
+    return mLength * mWidth * mHeight;
   }
 }

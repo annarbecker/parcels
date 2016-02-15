@@ -11,7 +11,7 @@ public class ParcelTest {
 
   @Test
   public void volume_calculateVolumeWithGivenDimensions_parcelVolume() {
-    Parcel testParcel = new Parcel(3.0, 4.0, 5.0, 12.5);
-    assertEquals(60.0, testParcel.volume());
+    Parcel testParcel = new Parcel(3.1, 4.0, 6.0, 12.5);
+    assertEquals(74.4, testParcel.volume(), 0);
   }
 }
