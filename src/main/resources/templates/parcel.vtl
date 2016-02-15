@@ -2,24 +2,48 @@
 <form class="form-inline" action="/parcel" method="post">
   <div class="form-group">
     <label for="length">Length</label>
-    <input type="text" name="length" id="length" class="form-control">
+    <input type="text" name="length" id="length" class="form-control" placeholder="inches" required>
   </div>
   <div class="form-group">
     <label for="width">Width</label>
-    <input type="text" name="width" id="width" class="form-control">
+    <input type="text" name="width" id="width" class="form-control" placeholder="inches" required>
   </div>
   <div class="form-group">
     <label for="height">Height</label>
-    <input type="text" name="height" id="height" class="form-control">
+    <input type="text" name="height" id="height" class="form-control" placeholder="inches" required>
   </div>
   <div class="form-group">
     <label for="weight">Weight</label>
-    <input type="text" name="weight" id="weight" class="form-control">
+    <input type="text" name="weight" id="weight" class="form-control" placeholder="pounds" required>
   </div>
-  <button type="submit" name="parcelSubmit" id="parcelSubmit" class="btn btn-default"></button>
+  <button type="submit" name="parcelSubmit" id="parcelSubmit" class="btn btn-default">Submit</button>
 </form>
 
 #if($parcel)
   <h3>You have entered a $parcel.dimensions(). Would you like to estimate shipping costs?</h3>
+  <form class="form-inline" action="/shipping" method="post">
+    <div class="form-group">
+      <label for="distance">Distance</label>
+      <input type="number" name="distance" id="distance" class="form-control" required>
+    </div>
+    <div>
+      <label class="radio-inline">
+        <input type="radio" name="speed" value="1" id="ground" checked>Ground
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="speed" value="2" id="express">Express
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="speed" value="3" id="overnight">Overnight
+      </label>
+    </div>
+    <button type="submit" name="shippingSubmit" id="shippingSubmit" class="btn btn-info">Calculate shipping</button>
+  </form>
 #end
+
+#if($distance)
+  <h3>Your estimated cost is $cost.</h3>
+  <h4>Your parcel's volume is $volume cubic inches.</h4>
+#end
+
 <a href="/">Return to home page</a>
