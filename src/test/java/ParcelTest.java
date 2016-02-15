@@ -33,4 +33,10 @@ public class ParcelTest {
     assertEquals(94, testParcel.surfaceArea(), 0);
   }
 
+  @Test
+  public void giftWrap_calculateGiftWrapWithGivenDimensions_wrapCost() {
+    Parcel testParcel = new Parcel(3, 4, 5, 12.5);
+    assertEquals(9.4, testParcel.giftWrap(1), 0);
+  }
+
 }

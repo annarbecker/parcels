@@ -46,4 +46,11 @@ public class Parcel {
   public double surfaceArea() {
     return ((mLength * mWidth) + (mLength * mHeight) + (mWidth * mHeight)) * 2;
   }
+
+  public double giftWrap(int paper) {
+    int cost = 0;
+    cost += surfaceArea() * 10 * paper;
+
+    return (double) cost / 100;
+  }
 }
