@@ -22,9 +22,20 @@ public class AppTest extends FluentTest {
   // Unit testing
 
   //Integration testing
-  // @Test
-  // public void rootTest() {
-  //     goTo("http://localhost:4567/");
-  //     assertThat(pageSource()).contains("Leap year detector");
-  // }
+  @Test
+  public void rootTest() {
+      goTo("http://localhost:4567/");
+      assertThat(pageSource()).contains("Calculate shipping costs");
+  }
+
+  @Test
+  public void createParcelTest() {
+      goTo("http://localhost:4567/");
+      fill("#length").with("8.5");
+      fill("#width").with("5.5");
+      fill("#height").with("6.7");
+      fill("#weight").with("15");
+      submit("#parcelSubmit");
+      assertThat(pageSource()).contains("8.5 inches by 5.5 inches by 6.7 inches");
+  }
 }

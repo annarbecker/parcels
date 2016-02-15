@@ -1,0 +1,25 @@
+<h2>Calculate shipping costs</h2>
+<form class="form-inline" action="/parcel" method="post">
+  <div class="form-group">
+    <label for="length">Length</label>
+    <input type="text" name="length" id="length" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="width">Width</label>
+    <input type="text" name="width" id="width" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="height">Height</label>
+    <input type="text" name="height" id="height" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight</label>
+    <input type="text" name="weight" id="weight" class="form-control">
+  </div>
+  <button type="submit" name="parcelSubmit" id="parcelSubmit" class="btn btn-default"></button>
+</form>
+
+#if($parcel)
+  <h3>You have entered a $parcel.dimensions(). Would you like to estimate shipping costs?</h3>
+#end
+<a href="/">Return to home page</a>

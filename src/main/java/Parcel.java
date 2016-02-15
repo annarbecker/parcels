@@ -12,6 +12,10 @@ public class Parcel {
     mWeight = weight;
   }
 
+  public String dimensions(){
+    return "a " + mWeight + " pound package measuring " + mLength + " inches by " + mWidth + " inches by " + mHeight + " inches";
+  }
+
   public double volume() {
     return mLength * mWidth * mHeight;
   }
@@ -50,7 +54,6 @@ public class Parcel {
   public double giftWrap(int paper) {
     int cost = 0;
     cost += surfaceArea() * 10 * paper;
-
     return (double) cost / 100;
   }
 }

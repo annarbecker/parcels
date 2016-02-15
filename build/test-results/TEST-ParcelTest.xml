@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ParcelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-02-15T21:33:56" hostname="epicodus-64.local" time="0.002">
+<testsuite name="ParcelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-02-15T22:09:14" hostname="epicodus-64.local" time="0.001">
   <properties/>
-  <testcase name="createNewParcel_instantiatesCorrectly" classname="ParcelTest" time="0.001"/>
+  <testcase name="createNewParcel_instantiatesCorrectly" classname="ParcelTest" time="0.0"/>
   <testcase name="surfaceArea_calculateSurfaceWithGivenDimensions_parcelSurface" classname="ParcelTest" time="0.0"/>
   <testcase name="volume_calculateVolumeWithGivenDimensions_parcelVolume" classname="ParcelTest" time="0.0"/>
   <testcase name="giftWrap_calculateGiftWrapWithGivenDimensions_wrapCost" classname="ParcelTest" time="0.0"/>
