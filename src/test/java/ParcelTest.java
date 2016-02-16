@@ -35,8 +35,8 @@ public class ParcelTest {
 
   @Test
   public void giftWrap_calculateGiftWrapWithGivenDimensions_wrapCost() {
-    Parcel testParcel = new Parcel(3, 4, 5, 12.5);
-    assertEquals(9.4, testParcel.giftWrap(1), 0);
+    Parcel testParcel = new Parcel(8.5, 5.5, 6.7, 12.5);
+    assertEquals(28.11, testParcel.giftWrap(1), 0);
   }
 
 }

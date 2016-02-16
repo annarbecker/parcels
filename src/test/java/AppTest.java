@@ -52,4 +52,20 @@ public class AppTest extends FluentTest {
     submit("#shippingSubmit");
     assertThat(pageSource()).contains("volume is 313.2");
   }
+
+  @Test
+  public void addGiftWrap() {
+    goTo("http://localhost:4567/");
+    fill("#length").with("8.5");
+    fill("#width").with("5.5");
+    fill("#height").with("6.7");
+    fill("#weight").with("15");
+    submit("#parcelSubmit");
+    fill("#distance").with("2000");
+    click("#ground");
+    submit("#shippingSubmit");
+    click("#discount");
+    submit("#giftSubmit");
+    assertThat(pageSource()).contains("28.11");
+  }
 }

@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-02-15T23:52:30" hostname="epicodus-64.local" time="0.399">
+<testsuite name="AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-02-16T00:35:34" hostname="epicodus-64.local" time="0.422">
   <properties/>
-  <testcase name="createParcelTest" classname="AppTest" time="0.332"/>
-  <testcase name="rootTest" classname="AppTest" time="0.01"/>
-  <testcase name="estimateShipping" classname="AppTest" time="0.049"/>
+  <testcase name="createParcelTest" classname="AppTest" time="0.309"/>
+  <testcase name="rootTest" classname="AppTest" time="0.011"/>
+  <testcase name="addGiftWrap" classname="AppTest" time="0.06"/>
+  <testcase name="estimateShipping" classname="AppTest" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Thread-4] INFO spark.webserver.SparkServer - == Spark has ignited ...
 [Thread-4] INFO spark.webserver.SparkServer - >> Listening on 0.0.0.0:4567
 [Thread-4] INFO org.eclipse.jetty.server.Server - jetty-9.0.2.v20130417
-[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@4fbb187c{HTTP/1.1}{0.0.0.0:4567}
-Feb 15, 2016 3:52:31 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
+[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@30828608{HTTP/1.1}{0.0.0.0:4567}
+Feb 15, 2016 4:35:35 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
 INFO: Bad input type: "number", creating a text input
-Feb 15, 2016 3:52:31 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
+Feb 15, 2016 4:35:35 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
 INFO: Bad input type: "number", creating a text input
-Feb 15, 2016 3:52:31 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
+Feb 15, 2016 4:35:35 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
+INFO: Bad input type: "number", creating a text input
+Feb 15, 2016 4:35:35 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
+INFO: Bad input type: "number", creating a text input
+Feb 15, 2016 4:35:35 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
+INFO: Bad input type: "number", creating a text input
+Feb 15, 2016 4:35:35 PM com.gargoylesoftware.htmlunit.html.InputElementFactory createElementNS
 INFO: Bad input type: "number", creating a text input
 [Test worker] INFO spark.webserver.SparkServer - >>> Spark shutting down ...
-[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@496efb94 by 
-[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@4fbb187c{HTTP/1.1}{0.0.0.0:4567}
+[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@22a144eb by 
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@30828608{HTTP/1.1}{0.0.0.0:4567}
 [Test worker] INFO spark.webserver.SparkServer - done
 ]]></system-err>
 </testsuite>

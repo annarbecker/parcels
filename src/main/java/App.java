@@ -36,13 +36,29 @@ public class App {
       HashMap<String, Object> model = new HashMap<String, Object>();
       int speed = Integer.parseInt(request.queryParams("speed"));
       int distance = Integer.parseInt(request.queryParams("distance"));
-      String cost = NumberFormat.getCurrencyInstance().format(((Parcel) request.session().attribute("parcel")).costToShip(speed, distance));
+      double shipmentCost = ((Parcel) request.session().attribute("parcel")).costToShip(speed, distance);
+      request.session().attribute("shipmentCost", shipmentCost);
+      String cost = NumberFormat.getCurrencyInstance().format(shipmentCost);
       String volume = String.format("%.4f", ((Parcel) request.session().attribute("parcel")).volume());
       model.put("parcel", request.session().attribute("parcel"));
       model.put("volume", volume);
       model.put("cost", cost);
       model.put("speed", speed);
       model.put("distance", distance);
+      model.put("template", "templates/parcel.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/gift", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int giftType = Integer.parseInt(request.queryParams("gift"));
+      String giftCost = NumberFormat.getCurrencyInstance().format(((Parcel) request.session().attribute("parcel")).giftWrap(giftType));
+      double shipmentCost = (double) request.session().attribute("shipmentCost");
+      double totalCost =  shipmentCost + ((Parcel) request.session().attribute("parcel")).giftWrap(giftType);
+      model.put("totalCost", NumberFormat.getCurrencyInstance().format(totalCost));
+      model.put("parcel", request.session().attribute("parcel"));
+      model.put("giftType", giftType);
+      model.put("giftCost", giftCost);
       model.put("template", "templates/parcel.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

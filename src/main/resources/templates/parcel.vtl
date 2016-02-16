@@ -44,6 +44,24 @@
 #if($distance)
   <h3>Your estimated cost is $cost.</h3>
   <h4>Your parcel's volume is $volume cubic inches.</h4>
+  <h4>Would you like to add gift wrapping?</h4>
+  <form class="form-inline" action="/gift" method="post">
+    <div>
+      <label class="radio-inline">
+        <input type="radio" name="gift" value="1" id="discount" checked>Discount
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="gift" value="3" id="economy">Economy
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="gift" value="5" id="deluxe">Deluxe
+      </label>
+    </div>
+    <button type="submit" name="giftSubmit" id="giftSubmit" class="btn btn-success">Calculate gift wrapping</button>
+  </form>
 #end
 
+#if ($giftType)
+  <h3>Your gift wrapping total is $giftCost. The total for your shipping and wrapping is $totalCost. Have a nice day! </h3>
+#end
 <a href="/">Return to home page</a>
